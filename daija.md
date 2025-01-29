@@ -1,5 +1,4 @@
 # Daija Yisrael 
-level 1 
 ## Experimental Design Bio 
 ### January 29, 2025 
 
