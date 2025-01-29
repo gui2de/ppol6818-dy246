@@ -12,4 +12,4 @@ She looks forward to applying the skills learned in this course during her summe
 * spending time in the archives
 Daija was introduced to archival research as a transcriber/translator for [Keywords for Black Louisiana ](https://docs.k4bl.org/about/) 
 Our project is apart of a larger ecosystem of digital humanities labs housed under the collective LifexCode: 
-![LxC Mangrove Logo!](/Users/daija/Desktop/LxC Mangrove.png)
+![LxC Mangrove Logo!](https://raw.githubusercontent.com/gui2de/ppol6818-dy246/daija's-bio/LxC%20Mangrove.png)
