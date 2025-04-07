@@ -11,21 +11,21 @@
 \pard\pardeftab720\sa321\partightenfactor0
 
 \f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
-\
-#Part 3: De-biasing a parameter estimate results. \
+#STATA_4\
+##Part 3: De-biasing a parameter estimate results. \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf2 The simulation study explores how sample size affects the estimation of treatment effects in a stratified setting with various covariates. The graphs provide visual representations of two key aspects of the analysis:  \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 ##Standard Error by Sample Size. \
+\f0\b\fs36 \cf2 ##3Standard Error by Sample Size. \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf2 The first graph shows how the standard error of the treatment effect estimate changes with increasing sample size. As expected, we observe a clear pattern of decreasing standard errors as the sample size increases following an approximate inverse square root relationship. This demonstrates the fundamental statistical principle that precision improves with larger samples.  \
   \
 ![boxpt1](STATA_4_results/Part3_table.png)\\\
 \
-###Key observations:  \
+Key observations:  \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 The standard error decreases sharply between the smallest sample sizes (100-500). \
@@ -37,13 +37,13 @@ This diminishing returns pattern suggests that beyond a certain sample size, add
 \cf2   \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 ##Treatment Effect Estimates by Sample Size. \
+\f0\b\fs36 \cf2 ###Treatment Effect Estimates by Sample Size. \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf2 The second graph shows the point estimates of the treatment effect across different sample sizes, along with their 95% confidence intervals, compared against the true effect (0.5) used in the data generating process.  \
 \
 ![boxpt1](STATA_4_results/Part3_graph2.png)\\\
-###Key observations:  \
+Key observations:  \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 At small sample sizes, the confidence intervals are wider, reflecting greater uncertainty. \
@@ -57,7 +57,7 @@ At the largest sample sizes, we see very narrow confidence intervals centered ne
 \cf2 \
 \pard\pardeftab720\sa298\partightenfactor0
 
-\f0\b\fs36 \cf2 ##Regression Model Comparisons. \
+\f0\b\fs36 \cf2 ###Regression Model Comparisons. \
 \pard\pardeftab720\sa240\partightenfactor0
 
 \f1\b0\fs24 \cf2 ![boxpt1](STATA_4_results//Part3_table.pgn)\\ \
