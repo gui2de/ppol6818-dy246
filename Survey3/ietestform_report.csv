@@ -1,0 +1,223 @@
+
+This report was created by user daija on 18Apr2025 using the Stata command ietestform
+
+Use either of these links to read more about this command:
+,https://github.com/worldbank/iefieldkit
+,https://dimewiki.worldbank.org/wiki/Ietestform
+
+,Form ID,daijas_form_dy246
+,Form Title,Daija's Form
+,Form Version,2504181506
+,Form File,Daija's+Form.xlsx
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: SPACES BEFORE OR AFTER STRING (choice sheet)
+----------------------------------------------------------------------
+
+"The string values in [list_name] column in the choice sheet are imported as strings and has leading "
+"or trailing spaces in the Excel file in the following cases:"
+
+,"row" ,"list_name" 
+,"18","county "
+,"19","county "
+,"20","county "
+,"21","county "
+,"22","county "
+,"23","county "
+,"24","county "
+,"25","county "
+,"26","county "
+,"27","county "
+,"28","county "
+,"29","county "
+,"30","county "
+,"31","county "
+,"32","county "
+,"33","county "
+,"34","county "
+,"35","county "
+,"36","county "
+,"37","county "
+,"38","county "
+,"39","county "
+,"40","county "
+,"41","county "
+
+"The string values in [label] column in the choice sheet are imported as strings and has leading or "
+"trailing spaces in the Excel file in the following cases:"
+
+,"row" ,"label" 
+,"7","None of these options are me "
+,"12","I don't vote "
+,"46","Agree "
+,"48","I've taken something from school or work "
+,"49","I've participated in underaged drinking "
+,"50","I've cheated on or have been cheated on by a partner "
+,"51","I've taken something from school or work "
+,"52","I've participated in underaged drinking "
+,"53","I've cheated on or have been cheated on by a partner "
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Leading_and_Trailing_Spaces
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: NON NUMERIC NAME VALUES
+----------------------------------------------------------------------
+
+"There are non numeric values in the [value] column of the choice sheet"
+
+,"row" ,"list_name" ,"value" ,"label" 
+,"42","schoolsystem","school_system","school_system"
+,"48","ctrl_list","q1","I've taken something from school or work"
+,"49","ctrl_list","q2","I've participated in underaged drinking"
+,"50","ctrl_list","q3","I've cheated on or have been cheated on by a partner"
+,"51","trt_list","q1","I've taken something from school or work"
+,"52","trt_list","q2","I've participated in underaged drinking"
+,"53","trt_list","q3","I've cheated on or have been cheated on by a partner"
+,"54","trt_list","q4","I've lied on an application, resume, or interview"
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Value.2FName_Numeric
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: DUPLICATED LABEL WITHIN LIST
+----------------------------------------------------------------------
+
+"There are duplicated entries in the [label] column of the choice sheet within the [county] list(s) "
+"for the following labels:"
+
+,"row" ,"list_name" ,"value" ,"label" 
+,"22","county","5","Charles County"
+,"26","county","9","Charles County"
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Duplicated_List_Labels
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: NO STATA LIST LABEL
+----------------------------------------------------------------------
+
+"There is no column in the choice sheet with the name [label:stata]. This is best practice as it "
+"allows you to automatically import choice list labels optimized for Stata's value labels, making "
+"the data set easier to read."
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Stata_Labels_Columns
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: SPACES BEFORE OR AFTER STRING (survey sheet)
+----------------------------------------------------------------------
+
+"The string values in [name] column in the survey sheet are imported as strings and has leading or "
+"trailing spaces in the Excel file"
+
+,"row" ,"name" 
+,"35","hrs_of_work "
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Leading_and_Trailing_Spaces
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: MISSING END_GROUP/END_REPEAT NAME
+----------------------------------------------------------------------
+
+"It is bad practice to leave the name column empty for end_group or end_repeat fields. While this is "
+"allowed in ODK, it makes error finding harder and slower. The following repeat or end groups have "
+"empty name columns:"
+
+,"row" ,"type" ,"name" 
+,"31","end_repeat",""
+,"36","end_group",""
+,"52","end_group",""
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Matching_begin_.2Fend
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: NO STATA FIELD LABEL
+----------------------------------------------------------------------
+
+"There is no column in the survey sheet with the name [label:stata]. This is best practice as this "
+"allows you to automatically import variable labels optimized for Stata, making the data set easier "
+"to read."
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Stata_Labels_Columns
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: NON-REQUIRED NON-NOTE TYPE FIELD
+----------------------------------------------------------------------
+
+"Fields of types other than note should all be required so that it cannot be skipped during the "
+"interview. The following fields are not required and could therfore be skipped by the enumerator:"
+
+,"row" ,"type" ,"name" 
+,"39","select_multiple","votinghabits"
+,"40","select_one","electedofficiallikert"
+,"41","select_one","publicschool"
+,"42","select_multiple","schoolsystem"
+,"43","select_one","schoolexperience"
+,"49","integer","total_yes_ctrl"
+,"51","integer","total_yes_trt"
+,"53","integer","slider_likert"
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Required_Column
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: REQUIRED NOTE TYPE FIELD
+----------------------------------------------------------------------
+
+"Fields of type note creates an impassable view that are impossible for the enumerator to sweep "
+"pass. Make sure that is the inentional behavior for the following fields:"
+
+,"row" ,"type" ,"name" 
+,"19","note","duplicate_error"
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Required_Column
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+TEST: UNUSED CHOICE LISTS
+----------------------------------------------------------------------
+
+"There are lists in the choice sheet that are not used by any field in the survey sheet. While that "
+"is allowed in ODK syntax it is an indication of a typo that might casue errors later. Make sure "
+"that the following list items are indeed not supposed to be used:"
+
+,"row" ,"list_name" ,"value" ,"label" 
+,"48","ctrl_list","q1","I've taken something from school or work"
+,"49","ctrl_list","q2","I've participated in underaged drinking"
+,"50","ctrl_list","q3","I've cheated on or have been cheated on by a partner"
+,"51","trt_list","q1","I've taken something from school or work"
+,"52","trt_list","q2","I've participated in underaged drinking"
+,"53","trt_list","q3","I've cheated on or have been cheated on by a partner"
+,"54","trt_list","q4","I've lied on an application, resume, or interview"
+
+
+Read more about this test and why this is an error or does not follow the best practices we recommend here:
+https://dimewiki.worldbank.org/wiki/Ietestform#Unused_Choice_Lists
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+This is the end of the report.
